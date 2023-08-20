@@ -1,0 +1,206 @@
+[debug] [2023-07-25T06:29:56.655Z] ----------------------------------------------------------------------
+[debug] [2023-07-25T06:29:56.660Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\momna\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-07-25T06:29:56.661Z] CLI Version:   12.4.5
+[debug] [2023-07-25T06:29:56.661Z] Platform:      win32
+[debug] [2023-07-25T06:29:56.662Z] Node Version:  v18.16.0
+[debug] [2023-07-25T06:29:56.767Z] Time:          Tue Jul 25 2023 11:29:56 GMT+0500 (Pakistan Standard Time)
+[debug] [2023-07-25T06:29:56.767Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-25T06:29:57.065Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-25T06:29:57.066Z] > authorizing via signed-in user (momna533gb@gmail.com)
+[debug] [2023-07-25T06:29:57.067Z] [iam] checking project cavai-clone for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-25T06:29:57.074Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cavai-clone:testIamPermissions [none]
+[debug] [2023-07-25T06:29:57.074Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cavai-clone:testIamPermissions x-goog-quota-user=projects/cavai-clone
+[debug] [2023-07-25T06:29:57.075Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cavai-clone:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-25T06:29:59.357Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cavai-clone:testIamPermissions 200
+[debug] [2023-07-25T06:29:59.358Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cavai-clone:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-25T06:29:59.386Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cavai-clone [none]
+[debug] [2023-07-25T06:30:00.001Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cavai-clone 200
+[debug] [2023-07-25T06:30:00.001Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cavai-clone {"projectId":"cavai-clone","projectNumber":"958839444175","displayName":"Cavai-clone","name":"projects/cavai-clone","resources":{"hostingSite":"cavai-clone"},"state":"ACTIVE","etag":"1_f5864d76-d68e-487a-ba2f-3136f560248c"}
+[info] 
+[info] === Deploying to 'cavai-clone'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-07-25T06:30:00.061Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions [none]
+[debug] [2023-07-25T06:30:00.062Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-07-25T06:30:02.042Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions 200
+[debug] [2023-07-25T06:30:02.043Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions {"name":"projects/958839444175/sites/cavai-clone/versions/173bec796e89133a","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[cavai-clone]: beginning deploy... 
+[info] i  hosting[cavai-clone]: found 21 files in build 
+[debug] [2023-07-25T06:30:02.124Z] [hosting] uploading with 200 concurrency
+[debug] [2023-07-25T06:30:02.715Z] [hosting] hash cache [YnVpbGQ] stored for 21 files
+[debug] [2023-07-25T06:30:02.717Z] [hosting][hash queue][FINAL] {"max":565,"min":155,"avg":226.66666666666666,"active":0,"complete":21,"success":21,"errored":0,"retried":0,"total":21,"elapsed":586}
+[debug] [2023-07-25T06:30:02.718Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/958839444175/sites/cavai-clone/versions/173bec796e89133a:populateFiles [none]
+[debug] [2023-07-25T06:30:02.718Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/958839444175/sites/cavai-clone/versions/173bec796e89133a:populateFiles {"files":{"/asset-manifest.json":"178a5e47cb961bf2008f249261fa9629302370f5f6a16c6a80b1f4040ac59523","/index.html":"cd6d4dfd84ef670f8cb8c49581e283a5368e9d3b461d9c93635ed141275c3909","/static/css/main.188c7e56.css":"c0b0ccaf9b19474f2c08bf338fec89efcb23caa38559755aa413d7579cc70d12","/static/css/main.188c7e56.css.map":"eda6445639c1bb47c2110415d66c2ac7a9751434f2e85a2ed4641d050d97c86a","/static/js/main.39b4e87e.js.LICENSE.txt":"3daaa67197a99559498f9dd1b84fda711b1037023b8ab55e47f3c3d0cd9163d0","/static/media/adidas_zalando_cover.e3e85af96f8713812995.webp":"ae323514cfeda649a85748871bb46a2a77941ea90c9a860cc1616ae5710d421e","/static/media/logo-1-copy@2.a98b5d0d28b081372e7c.webp":"8adff6dbd9f08de068d30843bb86d30686a4aa27eec733e566941ee073e5eb12","/static/media/logo-6-copy@2.a938f7db59bcf79bff95.webp":"52b2585ea076eca71cc86d8760d7e9f705dee9ebd3e3ebe93fc90a7261467aee","/static/media/logo-7-copy@2.40f6d5d5a99cf14dcea1.webp":"47862c39663d08857908c17fc46465aeb7241fe7c7a6e66881e659e97fde6b02","/static/media/logo-9-copy@2.99afca2105b49b80d795.webp":"d7a4d10c454b088bf90d4d9b8b1917e95d874cc91f2625cd54af47efc390c29a","/static/media/logo-8-copy@2.c53fe95569a4d0072dff.webp":"894912390b0d86010fae82400f32aadddac6665cdbee97b9280b6727936773a7","/static/media/convobubble.a3f375fa79d82cc6a6ee.webp":"579582d2952c1753ff0e2a3d2783dca329948fa91c0c49fb6d4d1a42672f0de4","/static/media/testimonials.21dbc041bd5b99429d7d.jpg":"126a8517d626575e252623a499ac81c283b8979eb59affe688f4c9a5582f09a4","/static/media/commercial_small .3e9d518d3d53bf29f7f9.jpg":"98ef39d5dffb7831a830f59af6f88a53f49600b9fda20a55eaefb9db73c51592","/static/media/blog.dfab4da5534de1dc992d.jpg":"8757ff073fffa8294915264ec613d84a22e05b8c6c2bf39d306e09b1c14be202","/static/media/personalised-asset.a03635646ee958d34137.png":"aa11ddcf2f54d593749e00bf45c86cc14973237d07dc8ccc913e862d0e5d80d7","/static/js/main.39b4e87e.js":"57c4cec549fe53eb6ef2d6f86d5eba0f3cd102652ebc6f8bc9bef6af4caf7cce","/static/media/insightful-asset.5ef7925792672a31c6bb.png":"2aacbd75cb0172d58a244382672a1ae802125219678b34ac26fa9cbfcf2f32a0","/static/media/privacy-first-asset.4d138b1e72e25bc7dbc3.png":"c3a4970be9accdbc83e700d07489158bd3b0c46d6b9bc6c4e92e74c375338565","/static/js/main.39b4e87e.js.map":"b073e62e52cca0b604db769debf9376c3f370e4d59dcb2e7190d95497603c95f","/static/media/armani.d672640d5f605f298f2b.gif":"a7ecb7d653be781207705feac505b71d2476fee34758599156eea5261b07dd7c"}}
+[debug] [2023-07-25T06:30:04.503Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/958839444175/sites/cavai-clone/versions/173bec796e89133a:populateFiles 200
+[debug] [2023-07-25T06:30:04.504Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/958839444175/sites/cavai-clone/versions/173bec796e89133a:populateFiles {"uploadRequiredHashes":["cd6d4dfd84ef670f8cb8c49581e283a5368e9d3b461d9c93635ed141275c3909","57c4cec549fe53eb6ef2d6f86d5eba0f3cd102652ebc6f8bc9bef6af4caf7cce","b073e62e52cca0b604db769debf9376c3f370e4d59dcb2e7190d95497603c95f","178a5e47cb961bf2008f249261fa9629302370f5f6a16c6a80b1f4040ac59523"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files"}
+[debug] [2023-07-25T06:30:04.507Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/cd6d4dfd84ef670f8cb8c49581e283a5368e9d3b461d9c93635ed141275c3909 [none]
+[debug] [2023-07-25T06:30:04.507Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/cd6d4dfd84ef670f8cb8c49581e283a5368e9d3b461d9c93635ed141275c3909 [stream]
+[debug] [2023-07-25T06:30:04.511Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/57c4cec549fe53eb6ef2d6f86d5eba0f3cd102652ebc6f8bc9bef6af4caf7cce [none]
+[debug] [2023-07-25T06:30:04.511Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/57c4cec549fe53eb6ef2d6f86d5eba0f3cd102652ebc6f8bc9bef6af4caf7cce [stream]
+[debug] [2023-07-25T06:30:04.515Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/b073e62e52cca0b604db769debf9376c3f370e4d59dcb2e7190d95497603c95f [none]
+[debug] [2023-07-25T06:30:04.515Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/b073e62e52cca0b604db769debf9376c3f370e4d59dcb2e7190d95497603c95f [stream]
+[debug] [2023-07-25T06:30:04.517Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/178a5e47cb961bf2008f249261fa9629302370f5f6a16c6a80b1f4040ac59523 [none]
+[debug] [2023-07-25T06:30:04.517Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/178a5e47cb961bf2008f249261fa9629302370f5f6a16c6a80b1f4040ac59523 [stream]
+[debug] [2023-07-25T06:30:04.520Z] [hosting][populate queue][FINAL] {"max":1796,"min":1796,"avg":1796,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1809}
+[debug] [2023-07-25T06:30:04.521Z] [hosting] uploads queued: 4
+[debug] [2023-07-25T06:30:06.468Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/cd6d4dfd84ef670f8cb8c49581e283a5368e9d3b461d9c93635ed141275c3909 200
+[debug] [2023-07-25T06:30:06.469Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/cd6d4dfd84ef670f8cb8c49581e283a5368e9d3b461d9c93635ed141275c3909 [stream]
+[debug] [2023-07-25T06:30:06.476Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/178a5e47cb961bf2008f249261fa9629302370f5f6a16c6a80b1f4040ac59523 200
+[debug] [2023-07-25T06:30:06.478Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/178a5e47cb961bf2008f249261fa9629302370f5f6a16c6a80b1f4040ac59523 [stream]
+[debug] [2023-07-25T06:30:06.727Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/b073e62e52cca0b604db769debf9376c3f370e4d59dcb2e7190d95497603c95f 200
+[debug] [2023-07-25T06:30:06.728Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/b073e62e52cca0b604db769debf9376c3f370e4d59dcb2e7190d95497603c95f [stream]
+[debug] [2023-07-25T06:30:06.839Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/57c4cec549fe53eb6ef2d6f86d5eba0f3cd102652ebc6f8bc9bef6af4caf7cce 200
+[debug] [2023-07-25T06:30:06.840Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/173bec796e89133a/files/57c4cec549fe53eb6ef2d6f86d5eba0f3cd102652ebc6f8bc9bef6af4caf7cce [stream]
+[debug] [2023-07-25T06:30:06.840Z] [hosting][upload queue][FINAL] {"max":2334,"min":1965,"avg":2123,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":2336}
+[info] +  hosting[cavai-clone]: file upload complete 
+[debug] [2023-07-25T06:30:06.848Z] [hosting] deploy completed after 4798ms
+[debug] [2023-07-25T06:30:06.849Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "cavai-clone"
+    },
+    "version": "projects/958839444175/sites/cavai-clone/versions/173bec796e89133a"
+  }
+]
+[info] i  hosting[cavai-clone]: finalizing version... 
+[debug] [2023-07-25T06:30:06.862Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions/173bec796e89133a updateMask=status%2Cconfig
+[debug] [2023-07-25T06:30:06.863Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions/173bec796e89133a {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2023-07-25T06:30:08.658Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions/173bec796e89133a 200
+[debug] [2023-07-25T06:30:08.659Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions/173bec796e89133a {"name":"projects/958839444175/sites/cavai-clone/versions/173bec796e89133a","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-07-25T06:30:03.546092Z","createUser":{"email":"momna533gb@gmail.com"},"finalizeTime":"2023-07-25T06:30:10.258066Z","finalizeUser":{"email":"momna533gb@gmail.com"}}
+[debug] [2023-07-25T06:30:08.659Z] [hosting] finalized version for cavai-clone:[object Object]
+[info] +  hosting[cavai-clone]: version finalized 
+[info] i  hosting[cavai-clone]: releasing new version... 
+[debug] [2023-07-25T06:30:08.663Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/channels/live/releases versionName=projects%2F958839444175%2Fsites%2Fcavai-clone%2Fversions%2F173bec796e89133a
+[debug] [2023-07-25T06:30:08.663Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/channels/live/releases {}
+[debug] [2023-07-25T06:30:10.636Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/channels/live/releases 200
+[debug] [2023-07-25T06:30:10.636Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/channels/live/releases {"name":"projects/958839444175/sites/cavai-clone/channels/live/releases/1690266611762000","version":{"name":"projects/958839444175/sites/cavai-clone/versions/173bec796e89133a","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-07-25T06:30:03.546092Z","createUser":{"email":"momna533gb@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtffaaGjtKp8jckDRlAd_BPrT-kl-7oDFT1Tt8knc7Ao3eE"},"finalizeTime":"2023-07-25T06:30:10.258066Z","finalizeUser":{"email":"momna533gb@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtffaaGjtKp8jckDRlAd_BPrT-kl-7oDFT1Tt8knc7Ao3eE"}},"type":"DEPLOY","releaseTime":"2023-07-25T06:30:11.762Z","releaseUser":{"email":"momna533gb@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtffaaGjtKp8jckDRlAd_BPrT-kl-7oDFT1Tt8knc7Ao3eE"}}
+[debug] [2023-07-25T06:30:10.636Z] [hosting] release: {"name":"projects/958839444175/sites/cavai-clone/channels/live/releases/1690266611762000","version":{"name":"projects/958839444175/sites/cavai-clone/versions/173bec796e89133a","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-07-25T06:30:03.546092Z","createUser":{"email":"momna533gb@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtffaaGjtKp8jckDRlAd_BPrT-kl-7oDFT1Tt8knc7Ao3eE"},"finalizeTime":"2023-07-25T06:30:10.258066Z","finalizeUser":{"email":"momna533gb@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtffaaGjtKp8jckDRlAd_BPrT-kl-7oDFT1Tt8knc7Ao3eE"}},"type":"DEPLOY","releaseTime":"2023-07-25T06:30:11.762Z","releaseUser":{"email":"momna533gb@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtffaaGjtKp8jckDRlAd_BPrT-kl-7oDFT1Tt8knc7Ao3eE"}}
+[info] +  hosting[cavai-clone]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/cavai-clone/overview
+[info] Hosting URL: https://cavai-clone.web.app
+[debug] [2023-07-25T06:30:16.437Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\momna\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:254:49)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-07-25T07:28:13.842Z] ----------------------------------------------------------------------
+[debug] [2023-07-25T07:28:13.849Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\momna\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-07-25T07:28:13.851Z] CLI Version:   12.4.5
+[debug] [2023-07-25T07:28:13.852Z] Platform:      win32
+[debug] [2023-07-25T07:28:13.853Z] Node Version:  v18.16.0
+[debug] [2023-07-25T07:28:13.879Z] Time:          Tue Jul 25 2023 12:28:13 GMT+0500 (Pakistan Standard Time)
+[debug] [2023-07-25T07:28:13.879Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-25T07:28:14.065Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-25T07:28:14.066Z] > authorizing via signed-in user (momna533gb@gmail.com)
+[debug] [2023-07-25T07:28:14.066Z] [iam] checking project cavai-clone for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-25T07:28:14.070Z] > refreshing access token with scopes: []
+[debug] [2023-07-25T07:28:14.074Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-07-25T07:28:14.075Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-25T07:28:15.073Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-07-25T07:28:15.074Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-25T07:28:15.103Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cavai-clone:testIamPermissions [none]
+[debug] [2023-07-25T07:28:15.103Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cavai-clone:testIamPermissions x-goog-quota-user=projects/cavai-clone
+[debug] [2023-07-25T07:28:15.104Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cavai-clone:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-25T07:28:16.738Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cavai-clone:testIamPermissions 200
+[debug] [2023-07-25T07:28:16.738Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cavai-clone:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-25T07:28:16.744Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cavai-clone [none]
+[debug] [2023-07-25T07:28:17.452Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cavai-clone 200
+[debug] [2023-07-25T07:28:17.452Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cavai-clone {"projectId":"cavai-clone","projectNumber":"958839444175","displayName":"Cavai-clone","name":"projects/cavai-clone","resources":{"hostingSite":"cavai-clone"},"state":"ACTIVE","etag":"1_f5864d76-d68e-487a-ba2f-3136f560248c"}
+[info] 
+[info] === Deploying to 'cavai-clone'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-07-25T07:28:17.485Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions [none]
+[debug] [2023-07-25T07:28:17.486Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-07-25T07:28:19.796Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions 200
+[debug] [2023-07-25T07:28:19.796Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions {"name":"projects/958839444175/sites/cavai-clone/versions/57ff3d957ad4a01c","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[cavai-clone]: beginning deploy... 
+[info] i  hosting[cavai-clone]: found 21 files in build 
+[debug] [2023-07-25T07:28:19.861Z] [hosting] uploading with 200 concurrency
+[debug] [2023-07-25T07:28:20.398Z] [hosting] hash cache [YnVpbGQ] stored for 21 files
+[debug] [2023-07-25T07:28:20.399Z] [hosting][hash queue][FINAL] {"max":450,"min":67,"avg":133.0952380952381,"active":0,"complete":21,"success":21,"errored":0,"retried":0,"total":21,"elapsed":522}
+[debug] [2023-07-25T07:28:20.400Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/958839444175/sites/cavai-clone/versions/57ff3d957ad4a01c:populateFiles [none]
+[debug] [2023-07-25T07:28:20.400Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/958839444175/sites/cavai-clone/versions/57ff3d957ad4a01c:populateFiles {"files":{"/asset-manifest.json":"a11060cc77f54185f5d5faf1ba686c30face0702028668337fe55553c292ba68","/index.html":"50d1ab0f3d334520301b99c0edf647f02d5b92d6da788c356ac20d5332ec6280","/static/css/main.e2298e00.css":"de52bce488f01084a8b6b5b35391043a63ac5bfdbfcadc293721b540fb6e340d","/static/css/main.e2298e00.css.map":"01d2aa92794feca18c2cce3bfb9f3e7a87893a3df3bddafe8f0b54b56f3e76dc","/static/js/main.59cfea41.js.LICENSE.txt":"3daaa67197a99559498f9dd1b84fda711b1037023b8ab55e47f3c3d0cd9163d0","/static/media/adidas_zalando_cover.e3e85af96f8713812995.webp":"ae323514cfeda649a85748871bb46a2a77941ea90c9a860cc1616ae5710d421e","/static/media/logo-1-copy@2.a98b5d0d28b081372e7c.webp":"8adff6dbd9f08de068d30843bb86d30686a4aa27eec733e566941ee073e5eb12","/static/media/logo-6-copy@2.a938f7db59bcf79bff95.webp":"52b2585ea076eca71cc86d8760d7e9f705dee9ebd3e3ebe93fc90a7261467aee","/static/media/logo-7-copy@2.40f6d5d5a99cf14dcea1.webp":"47862c39663d08857908c17fc46465aeb7241fe7c7a6e66881e659e97fde6b02","/static/media/logo-8-copy@2.c53fe95569a4d0072dff.webp":"894912390b0d86010fae82400f32aadddac6665cdbee97b9280b6727936773a7","/static/media/logo-9-copy@2.99afca2105b49b80d795.webp":"d7a4d10c454b088bf90d4d9b8b1917e95d874cc91f2625cd54af47efc390c29a","/static/media/convobubble.a3f375fa79d82cc6a6ee.webp":"579582d2952c1753ff0e2a3d2783dca329948fa91c0c49fb6d4d1a42672f0de4","/static/media/testimonials.21dbc041bd5b99429d7d.jpg":"126a8517d626575e252623a499ac81c283b8979eb59affe688f4c9a5582f09a4","/static/media/commercial_small .3e9d518d3d53bf29f7f9.jpg":"98ef39d5dffb7831a830f59af6f88a53f49600b9fda20a55eaefb9db73c51592","/static/media/blog.dfab4da5534de1dc992d.jpg":"8757ff073fffa8294915264ec613d84a22e05b8c6c2bf39d306e09b1c14be202","/static/media/personalised-asset.a03635646ee958d34137.png":"aa11ddcf2f54d593749e00bf45c86cc14973237d07dc8ccc913e862d0e5d80d7","/static/js/main.59cfea41.js":"b741089a0bbcb647b1be21fb96128683bcf1a49daa9633885210c7e2910e3e84","/static/media/insightful-asset.5ef7925792672a31c6bb.png":"2aacbd75cb0172d58a244382672a1ae802125219678b34ac26fa9cbfcf2f32a0","/static/media/privacy-first-asset.4d138b1e72e25bc7dbc3.png":"c3a4970be9accdbc83e700d07489158bd3b0c46d6b9bc6c4e92e74c375338565","/static/js/main.59cfea41.js.map":"714ebfec6fb3058836ce6c26362811a95c5f21546938c101d6a4e2a16e9072ae","/static/media/armani.d672640d5f605f298f2b.gif":"a7ecb7d653be781207705feac505b71d2476fee34758599156eea5261b07dd7c"}}
+[debug] [2023-07-25T07:28:22.042Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/958839444175/sites/cavai-clone/versions/57ff3d957ad4a01c:populateFiles 200
+[debug] [2023-07-25T07:28:22.042Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/958839444175/sites/cavai-clone/versions/57ff3d957ad4a01c:populateFiles {"uploadRequiredHashes":["de52bce488f01084a8b6b5b35391043a63ac5bfdbfcadc293721b540fb6e340d","01d2aa92794feca18c2cce3bfb9f3e7a87893a3df3bddafe8f0b54b56f3e76dc","714ebfec6fb3058836ce6c26362811a95c5f21546938c101d6a4e2a16e9072ae","50d1ab0f3d334520301b99c0edf647f02d5b92d6da788c356ac20d5332ec6280","a11060cc77f54185f5d5faf1ba686c30face0702028668337fe55553c292ba68","b741089a0bbcb647b1be21fb96128683bcf1a49daa9633885210c7e2910e3e84"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files"}
+[debug] [2023-07-25T07:28:22.046Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/de52bce488f01084a8b6b5b35391043a63ac5bfdbfcadc293721b540fb6e340d [none]
+[debug] [2023-07-25T07:28:22.046Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/de52bce488f01084a8b6b5b35391043a63ac5bfdbfcadc293721b540fb6e340d [stream]
+[debug] [2023-07-25T07:28:22.051Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/01d2aa92794feca18c2cce3bfb9f3e7a87893a3df3bddafe8f0b54b56f3e76dc [none]
+[debug] [2023-07-25T07:28:22.051Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/01d2aa92794feca18c2cce3bfb9f3e7a87893a3df3bddafe8f0b54b56f3e76dc [stream]
+[debug] [2023-07-25T07:28:22.054Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/714ebfec6fb3058836ce6c26362811a95c5f21546938c101d6a4e2a16e9072ae [none]
+[debug] [2023-07-25T07:28:22.054Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/714ebfec6fb3058836ce6c26362811a95c5f21546938c101d6a4e2a16e9072ae [stream]
+[debug] [2023-07-25T07:28:22.057Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/50d1ab0f3d334520301b99c0edf647f02d5b92d6da788c356ac20d5332ec6280 [none]
+[debug] [2023-07-25T07:28:22.057Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/50d1ab0f3d334520301b99c0edf647f02d5b92d6da788c356ac20d5332ec6280 [stream]
+[debug] [2023-07-25T07:28:22.060Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/a11060cc77f54185f5d5faf1ba686c30face0702028668337fe55553c292ba68 [none]
+[debug] [2023-07-25T07:28:22.060Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/a11060cc77f54185f5d5faf1ba686c30face0702028668337fe55553c292ba68 [stream]
+[debug] [2023-07-25T07:28:22.063Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/b741089a0bbcb647b1be21fb96128683bcf1a49daa9633885210c7e2910e3e84 [none]
+[debug] [2023-07-25T07:28:22.064Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/b741089a0bbcb647b1be21fb96128683bcf1a49daa9633885210c7e2910e3e84 [stream]
+[debug] [2023-07-25T07:28:22.068Z] [hosting][populate queue][FINAL] {"max":1697,"min":1697,"avg":1697,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1719}
+[debug] [2023-07-25T07:28:22.068Z] [hosting] uploads queued: 6
+[debug] [2023-07-25T07:28:23.445Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/de52bce488f01084a8b6b5b35391043a63ac5bfdbfcadc293721b540fb6e340d 200
+[debug] [2023-07-25T07:28:23.445Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/de52bce488f01084a8b6b5b35391043a63ac5bfdbfcadc293721b540fb6e340d [stream]
+[debug] [2023-07-25T07:28:23.511Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/a11060cc77f54185f5d5faf1ba686c30face0702028668337fe55553c292ba68 200
+[debug] [2023-07-25T07:28:23.511Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/a11060cc77f54185f5d5faf1ba686c30face0702028668337fe55553c292ba68 [stream]
+[debug] [2023-07-25T07:28:23.516Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/50d1ab0f3d334520301b99c0edf647f02d5b92d6da788c356ac20d5332ec6280 200
+[debug] [2023-07-25T07:28:23.517Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/50d1ab0f3d334520301b99c0edf647f02d5b92d6da788c356ac20d5332ec6280 [stream]
+[debug] [2023-07-25T07:28:23.754Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/b741089a0bbcb647b1be21fb96128683bcf1a49daa9633885210c7e2910e3e84 200
+[debug] [2023-07-25T07:28:23.754Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/b741089a0bbcb647b1be21fb96128683bcf1a49daa9633885210c7e2910e3e84 [stream]
+[debug] [2023-07-25T07:28:23.956Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/01d2aa92794feca18c2cce3bfb9f3e7a87893a3df3bddafe8f0b54b56f3e76dc 200
+[debug] [2023-07-25T07:28:23.957Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/01d2aa92794feca18c2cce3bfb9f3e7a87893a3df3bddafe8f0b54b56f3e76dc [stream]
+[debug] [2023-07-25T07:28:24.050Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/714ebfec6fb3058836ce6c26362811a95c5f21546938c101d6a4e2a16e9072ae 200
+[debug] [2023-07-25T07:28:24.050Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cavai-clone/versions/57ff3d957ad4a01c/files/714ebfec6fb3058836ce6c26362811a95c5f21546938c101d6a4e2a16e9072ae [stream]
+[debug] [2023-07-25T07:28:24.050Z] [hosting][upload queue][FINAL] {"max":2006,"min":1403,"avg":1661.8333333333333,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":2007}
+[info] +  hosting[cavai-clone]: file upload complete 
+[debug] [2023-07-25T07:28:24.126Z] [hosting] deploy completed after 4321ms
+[debug] [2023-07-25T07:28:24.126Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "cavai-clone"
+    },
+    "version": "projects/958839444175/sites/cavai-clone/versions/57ff3d957ad4a01c"
+  }
+]
+[info] i  hosting[cavai-clone]: finalizing version... 
+[debug] [2023-07-25T07:28:24.133Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions/57ff3d957ad4a01c updateMask=status%2Cconfig
+[debug] [2023-07-25T07:28:24.134Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions/57ff3d957ad4a01c {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2023-07-25T07:28:25.742Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions/57ff3d957ad4a01c 200
+[debug] [2023-07-25T07:28:25.742Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/versions/57ff3d957ad4a01c {"name":"projects/958839444175/sites/cavai-clone/versions/57ff3d957ad4a01c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-07-25T07:28:21.198252Z","createUser":{"email":"momna533gb@gmail.com"},"finalizeTime":"2023-07-25T07:28:27.687181Z","finalizeUser":{"email":"momna533gb@gmail.com"}}
+[debug] [2023-07-25T07:28:25.742Z] [hosting] finalized version for cavai-clone:[object Object]
+[info] +  hosting[cavai-clone]: version finalized 
+[info] i  hosting[cavai-clone]: releasing new version... 
+[debug] [2023-07-25T07:28:25.747Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/channels/live/releases versionName=projects%2F958839444175%2Fsites%2Fcavai-clone%2Fversions%2F57ff3d957ad4a01c
+[debug] [2023-07-25T07:28:25.747Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/channels/live/releases {}
+[debug] [2023-07-25T07:28:27.436Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/channels/live/releases 200
+[debug] [2023-07-25T07:28:27.436Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cavai-clone/channels/live/releases {"name":"projects/958839444175/sites/cavai-clone/channels/live/releases/1690270108810000","version":{"name":"projects/958839444175/sites/cavai-clone/versions/57ff3d957ad4a01c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-07-25T07:28:21.198252Z","createUser":{"email":"momna533gb@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtffaaGjtKp8jckDRlAd_BPrT-kl-7oDFT1Tt8knc7Ao3eE"},"finalizeTime":"2023-07-25T07:28:27.687181Z","finalizeUser":{"email":"momna533gb@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtffaaGjtKp8jckDRlAd_BPrT-kl-7oDFT1Tt8knc7Ao3eE"}},"type":"DEPLOY","releaseTime":"2023-07-25T07:28:28.810Z","releaseUser":{"email":"momna533gb@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtffaaGjtKp8jckDRlAd_BPrT-kl-7oDFT1Tt8knc7Ao3eE"}}
+[debug] [2023-07-25T07:28:27.436Z] [hosting] release: {"name":"projects/958839444175/sites/cavai-clone/channels/live/releases/1690270108810000","version":{"name":"projects/958839444175/sites/cavai-clone/versions/57ff3d957ad4a01c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-07-25T07:28:21.198252Z","createUser":{"email":"momna533gb@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtffaaGjtKp8jckDRlAd_BPrT-kl-7oDFT1Tt8knc7Ao3eE"},"finalizeTime":"2023-07-25T07:28:27.687181Z","finalizeUser":{"email":"momna533gb@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtffaaGjtKp8jckDRlAd_BPrT-kl-7oDFT1Tt8knc7Ao3eE"}},"type":"DEPLOY","releaseTime":"2023-07-25T07:28:28.810Z","releaseUser":{"email":"momna533gb@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtffaaGjtKp8jckDRlAd_BPrT-kl-7oDFT1Tt8knc7Ao3eE"}}
+[info] +  hosting[cavai-clone]: release complete 
